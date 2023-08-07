@@ -19,11 +19,11 @@ if(e.target.files[0] && e.target.files.length > 0){
 
   return (
     <div className='h-screen flex items-center justify-center w-full'>
-        <form onSubmit={handleForm}>
-            <input type="text" className='p-2 border border-slate-300 outline-none focus:border-green-300 mb-3 block rounded-md min-w-[400px]' placeholder='Enter Name' />
-            <label htmlFor="image" className='my-3 p-4'>
+        <form onSubmit={handleForm} className="w-full px-3 sm:max-w-[400px]">
+            <input type="text" className='p-2 border border-slate-300 outline-none focus:border-green-300 mb-3 block rounded-md w-full' placeholder='Enter Name' />
+            <label htmlFor="image" className=''>
                 <input type="file" onChange={handleImage} name="image" id="image" className='hidden' />
-                <div className={`min-w-[400px] h-[200px] bg-gray-100 border-dashed ${selectedImg ? 'border-0' : 'border-2'} cursor-pointer border-black flex items-center justify-center rounded-sm`}>
+                <div className={`w-full h-[200px] bg-gray-100 border-dashed ${selectedImg ? 'border-0' : 'border-2'} cursor-pointer border-black flex items-center justify-center rounded-sm`}>
                 {
                     !selectedImg ? <LuUploadCloud className='' size={60} /> : <img src={selectedImg} className='w-full object-contain h-full rounded-lg' alt="image" />
                 }
