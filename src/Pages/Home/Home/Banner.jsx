@@ -25,7 +25,7 @@ if(e.target.files[0] && e.target.files.length > 0){
                 <input type="file" onChange={handleImage} name="image" id="image" className='hidden' />
                 <div className={`w-full h-[200px] bg-gray-100 border-dashed ${selectedImg ? 'border-0' : 'border-2'} cursor-pointer border-black flex items-center justify-center rounded-sm`}>
                 {
-                    !selectedImg ? <LuUploadCloud className='' size={60} /> : <img src={selectedImg} className='w-full object-contain h-full rounded-lg' alt="image" />
+                    !selectedImg ? <LuUploadCloud className='text-red-500' size={60} /> : <img src={selectedImg} className='w-full object-contain h-full rounded-lg' alt="image" />
                 }
                 </div>
             </label>
